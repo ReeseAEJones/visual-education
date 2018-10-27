@@ -21,12 +21,12 @@ public class RotateObj : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButton("Horizontal")) 
-            rotateX(Input.GetAxis("Horizontal"));
+        if (Input.GetButton("RotateHoriz")) 
+            rotateX(Input.GetAxis("RotateHoriz"));
         
 
-        if (Input.GetButton("Vertical"))
-            rotateY(Input.GetAxis("Vertical"));
+        if (Input.GetButton("RotateVert"))
+            rotateY(Input.GetAxis("RotateVert"));
 
         transform.rotation = Quaternion.Euler(rotation);
     }
