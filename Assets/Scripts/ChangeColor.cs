@@ -19,8 +19,7 @@ public class ChangeColor : MonoBehaviour {
     {
         if (Input.GetButtonDown("NewColor"))
         {
-            Color randomColor;
-            GetComponent<Renderer>().material.color = Color.red;
+            //GetComponent<Renderer>().material.color = ;
         }
     }
 }
