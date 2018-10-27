@@ -5,7 +5,7 @@ DandyHacks 2018 Fall Project
  - Reese AE Jones
  - Brandon Greet
  - (Member 3)
- - (Member 4)
+ - Ryan Bryla
 
 ## Goal
 To create an application to help educate students in Geometry and Calculus.
