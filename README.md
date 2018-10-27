@@ -14,4 +14,4 @@ To create an application to help educate students in Geometry and Calculus.
 `Unity` `Visual Studio` `C#`
 
 # Assets Used
-Unnity Standard Assets
+Unity Standard Assets
