@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeText : MonoBehaviour {
+    Transform cube;
     string text;
-    Vector3 size;
 	// Use this for initialization
 	void Start () {
-        this.text = GetComponent<TextMesh>().text;
-        this.size = transform.localScale;
+        this.cube = this.gameObject.transform;
+        this.text = cube.GetChild(0).GetComponent<TextMesh>().text;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        text = "Volume : " + (size.x * size.y * size.z).ToString();
-        GetComponent<TextMesh>().text = text;
-
+        Vector3 size = cube.GetChild(1).transform.localScale;
+        text = "Cube Description:";
+        text += "\nArea: " + (6 * size.x * size.y).ToString() + "m^2";
+        text += "\nVolume : " + (size.x * size.y * size.z).ToString() + "m^3";
+        cube.GetChild(0).GetComponent<TextMesh>().text = text;
     }
 }
