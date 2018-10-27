@@ -15,31 +15,31 @@ public class MoveObj : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-			this.cLocation = transform.position;
+			this.objLocation = transform.position;
 	}
 
 	public void moveRight(int amount){
-		 cLocation.x += amount;
+		 objLocation.x += amount;
 	}
 
 	public void moveLeft(int amount){
-			cLocation.x -= amount;
+			objLocation.x -= amount;
 	}
 
 	public void moveUp(int amount){
-		cLocation.y += amount;
+		objLocation.y += amount;
 	}
 
 	public void moveDown(int amount){
-		cLocation.y -= amount;
+		objLocation.y -= amount;
 	}
 
 	public void moveAway(int amount){
-			cLocation.z += amount;
+			objLocation.z += amount;
 	}
 
 	public void moveCloser(int amount){
-			cLocation.z -= amount;
+			objLocation.z -= amount;
 	}
 
 	// Update is called once per frame
