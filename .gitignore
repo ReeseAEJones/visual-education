@@ -40,4 +40,5 @@ sysinfo.txt
 
 # Mac
 *.app
+*.app/
 .DS_Store
