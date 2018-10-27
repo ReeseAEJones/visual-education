@@ -27,26 +27,39 @@ public class Manager : MonoBehaviour {
     {
         if (Input.GetButtonDown("SpawnCube"))
         {
-            shapes.Add(Instantiate(cubePrefab, Vector3.zero, Quaternion.identity));
+            Transform tempCube = Instantiate(cubePrefab, Vector3.zero, Quaternion.identity);
+            tempCube.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
+            shapes.Add(tempCube);
         }
         if (Input.GetButtonDown("SpawnSphere"))
         {
-            shapes.Add(Instantiate(spherePrefab, Vector3.zero, Quaternion.identity));
+            Transform tempSphere = Instantiate(spherePrefab, Vector3.zero, Quaternion.identity);
+            tempSphere.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
+            shapes.Add(tempSphere);
         }
         if (Input.GetButtonDown("SpawnCylinder"))
         {
-            shapes.Add(Instantiate(cylinderPrefab, Vector3.zero, Quaternion.identity));
+            Transform tempCyl = Instantiate(cylinderPrefab, Vector3.zero, Quaternion.identity);
+            tempCyl.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
+            shapes.Add(tempCyl);
         }
     }
 
     // Adds MoveObj, ResizeObj, and RotateObj script components to a specific object the user is focusing on.
     // Removes Same scripts from all other objects in scene.
     // Is called from an object being clicked on.
-    public void UpdateFocus(GameObject clickedObj)
+    public void UpdateFocus(Transform clickedObj)
     {
         for (int i = 0; i < this.shapes.Count; i++)
         {
-            shapes[i].gameObject.
+            Debug.Log("GOING IN SHAPES");
+            Destroy(shapes[i].gameObject.GetComponent<MoveObj>());
+            Destroy(shapes[i].gameObject.GetComponentInChildren<RotateObj>());
+            Destroy(shapes[i].gameObject.GetComponentInChildren<ResizeObj>());
         }
+
+        clickedObj.gameObject.AddComponent<MoveObj>();
+        clickedObj.GetChild(1).gameObject.AddComponent<RotateObj>();
+        clickedObj.GetChild(1).gameObject.AddComponent<ResizeObj>();
     }
 }

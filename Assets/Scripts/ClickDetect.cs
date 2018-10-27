@@ -20,4 +20,9 @@ public class ClickDetect : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnMouseDown()
+    {
+        managerScript.UpdateFocus(transform.parent);
+    }
 }
