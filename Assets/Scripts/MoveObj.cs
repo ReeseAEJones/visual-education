@@ -18,32 +18,27 @@ public class MoveObj : MonoBehaviour {
 			this.objLocation = transform.position;
 	}
 
-	public void moveRight(int amount){
+	public void moveX(float amount){
 		 objLocation.x += amount;
 	}
 
-	public void moveLeft(int amount){
-			objLocation.x -= amount;
-	}
-
-	public void moveUp(int amount){
+	public void moveY(float amount){
 		objLocation.y += amount;
 	}
 
-	public void moveDown(int amount){
-		objLocation.y -= amount;
-	}
-
-	public void moveAway(int amount){
+	public void moveZ(float amount){
 			objLocation.z += amount;
-	}
-
-	public void moveCloser(int amount){
-			objLocation.z -= amount;
 	}
 
 	// Update is called once per frame
 	void Update () {
-			transform.position = objLocation;
+
+        if (Input.GetButton("Horizontal"))
+            moveX(Input.GetAxis("Horizontal"));
+
+        if (Input.GetButton("Vertical"))
+            moveY(Input.GetAxis("Vertical"));
+
+        transform.position = objLocation;
 	}
 }
