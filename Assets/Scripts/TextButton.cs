@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TextButton : MonoBehaviour {
 
@@ -21,6 +22,6 @@ public class TextButton : MonoBehaviour {
 
     void OnMouseUp()
     {
-        Application.LoadLevel(1);
+        SceneManager.LoadScene(1);
     }
 }
