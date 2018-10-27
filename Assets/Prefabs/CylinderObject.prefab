@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436570102980414}
-  - component: {fileID: 114620730522023186}
   - component: {fileID: 114495218049380162}
   m_Layer: 0
   m_Name: CylinderObject
@@ -58,6 +57,7 @@ GameObject:
   - component: {fileID: 136123790802034914}
   - component: {fileID: 114346013420571464}
   - component: {fileID: 114731133279325534}
+  - component: {fileID: 114620730522023186}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114620730522023186
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953047250690108}
