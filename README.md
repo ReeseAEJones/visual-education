@@ -4,7 +4,7 @@ DandyHacks 2018 Fall Project
 ## Members
  - Reese AE Jones
  - Brandon Greet
- - (Member 3)
+ - Giovana Puccini
  - Ryan Bryla
 
 ## Goal
