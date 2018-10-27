@@ -17,7 +17,6 @@ public class CylinderText : MonoBehaviour {
     void Update()
     {
         Vector3 size = cylinder.GetChild(1).transform.localScale;
-        // random
         text = "Cylinder Description:";
         text += "\nArea: " + (2 * ((Mathf.PI * size.x * size.x) + (Mathf.PI * size.x *size.y))).ToString() + "m^2";
         text += "\nVolume : " + (Mathf.PI * size.x * size.x * size.y).ToString() + "m^3";
