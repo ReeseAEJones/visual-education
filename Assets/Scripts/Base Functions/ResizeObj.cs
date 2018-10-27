@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Resize componenet, can be applied to any object since
+ * Resize component, can be applied to any object since
  * all objects have x,y,and z sizes
  */ 
 
