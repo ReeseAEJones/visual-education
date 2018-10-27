@@ -17,6 +17,10 @@ public class ChangeColor : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetButtonDown("NewColor"))
+        {
+            Color randomColor;
+            GetComponent<Renderer>().material.color = Color.red;
+        }
     }
 }
