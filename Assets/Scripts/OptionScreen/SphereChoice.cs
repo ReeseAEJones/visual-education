@@ -19,6 +19,6 @@ public class SphereChoice : MonoBehaviour
     void OnMouseUp()
     {
         SettingData.ObjNumber = 2;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

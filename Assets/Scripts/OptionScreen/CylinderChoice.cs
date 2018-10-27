@@ -19,6 +19,6 @@ public class CylinderChoice : MonoBehaviour
     void OnMouseUp()
     {
         SettingData.ObjNumber = 1;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

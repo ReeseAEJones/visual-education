@@ -18,6 +18,6 @@ public class BoxChoice : MonoBehaviour {
     void OnMouseUp()
     {
         SettingData.ObjNumber = 0;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }
