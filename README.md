@@ -15,3 +15,4 @@ To create an application to help educate students in Geometry and Calculus.
 
 # Assets Used
 Unity Standard Assets
+Lowpy Environment Pack - by Korveen
