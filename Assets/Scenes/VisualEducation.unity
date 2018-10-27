@@ -315,7 +315,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445990490}
-  - component: {fileID: 1445990491}
   m_Layer: 0
   m_Name: ObjectManager
   m_TagString: Untagged
@@ -381,22 +380,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1445990491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 451333604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20c46c497ceffc4da407523cf2f540d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 4473727033666550, guid: 7c3a4249685331a478f1714e5afd58ed, type: 2}
-  spherePrefab: {fileID: 4461935162219734, guid: a173902a3952740e6a5e07e93bb9a14c,
-    type: 2}
-  cylinderPrefab: {fileID: 4436570102980414, guid: 5ee82322949748a4cb84033ac002b124,
-    type: 2}
 --- !u!1 &1576896935
 GameObject:
   m_ObjectHideFlags: 0

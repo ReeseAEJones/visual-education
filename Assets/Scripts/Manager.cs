@@ -8,12 +8,15 @@ public class Manager : MonoBehaviour {
     public Transform cubePrefab;
     public Transform spherePrefab;
     public Transform cylinderPrefab;
-
+    public Vector3 vector;
     // List to store all current objects in world
     List<Transform> shapes;
 
 	// Use this for initialization
 	void Start () {
+        this.vector.x = 0;
+        this.vector.y = 4;
+        this.vector.z = 0;
         shapes = new List<Transform>();
 	}
 	
@@ -27,19 +30,19 @@ public class Manager : MonoBehaviour {
     {
         if (Input.GetButtonDown("SpawnCube"))
         {
-            Transform tempCube = Instantiate(cubePrefab, Vector3.zero, Quaternion.identity);
+            Transform tempCube = Instantiate(cubePrefab, vector, Quaternion.identity);
             tempCube.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
             shapes.Add(tempCube);
         }
         if (Input.GetButtonDown("SpawnSphere"))
         {
-            Transform tempSphere = Instantiate(spherePrefab, Vector3.zero, Quaternion.identity);
+            Transform tempSphere = Instantiate(spherePrefab, vector, Quaternion.identity);
             tempSphere.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
             shapes.Add(tempSphere);
         }
         if (Input.GetButtonDown("SpawnCylinder"))
         {
-            Transform tempCyl = Instantiate(cylinderPrefab, Vector3.zero, Quaternion.identity);
+            Transform tempCyl = Instantiate(cylinderPrefab, vector, Quaternion.identity);
             tempCyl.GetChild(1).GetComponent<ClickDetect>().ManagerScript = this;
             shapes.Add(tempCyl);
         }
