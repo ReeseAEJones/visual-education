@@ -38,5 +38,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Mac folder .DS_Store
+# Mac
+*.app
 .DS_Store
