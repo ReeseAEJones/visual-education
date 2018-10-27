@@ -35,14 +35,14 @@ public class MoveObj : MonoBehaviour {
     }
 
     public void moveX(float amount){
-		objLocation.x += amount;
+        objLocation.x = amount;
 	}
 
 	public void moveY(float amount){
-		objLocation.y += amount;
+        objLocation.y += amount;
 	}
 
 	public void moveZ(float amount){
-		objLocation.z += amount;
+        objLocation.z += amount;
 	}
 }
