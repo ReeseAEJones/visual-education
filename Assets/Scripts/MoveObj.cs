@@ -15,11 +15,30 @@ public class MoveObj : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-			this.objLocation = transform.position;
-	}
+		this.objLocation = transform.position;
+    }
 
-	public void moveX(float amount){
-		 objLocation.x += amount;
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (Input.GetButton("Mouse X"))
+        {
+            moveX(Input.GetAxis("Mouse X"));
+            Debug.Log("MOUSE MOVED HORIZ");
+        }
+
+        if (Input.GetButton("Mouse Y"))
+        {
+            moveY(Input.GetAxis("Mouse Y"));
+            Debug.Log("MOUSE MOVED VERT");
+        }
+
+        transform.position = objLocation;
+    }
+
+    public void moveX(float amount){
+		objLocation.x += amount;
 	}
 
 	public void moveY(float amount){
@@ -27,18 +46,6 @@ public class MoveObj : MonoBehaviour {
 	}
 
 	public void moveZ(float amount){
-			objLocation.z += amount;
-	}
-
-	// Update is called once per frame
-	void Update () {
-
-        if (Input.GetButton("Horizontal"))
-            moveX(Input.GetAxis("Horizontal"));
-
-        if (Input.GetButton("Vertical"))
-            moveY(Input.GetAxis("Vertical"));
-
-        transform.position = objLocation;
+		objLocation.z += amount;
 	}
 }
