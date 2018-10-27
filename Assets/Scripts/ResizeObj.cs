@@ -16,6 +16,13 @@ public class ResizeObj : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetButton("Resize"))
+        {
+            resizeX(Input.GetAxis("Resize") * 0.1f);
+            resizeY(Input.GetAxis("Resize") * 0.1f);
+            resizeZ(Input.GetAxis("Resize") * 0.1f);
+        }
+
         transform.localScale = size;
 	}
 

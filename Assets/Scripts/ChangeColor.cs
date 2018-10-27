@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour {
 
-	MMaterial objMaterial;
+	Material objMaterial;
     Color objColor;
 
     // Use this for initialization
@@ -12,11 +12,6 @@ public class ChangeColor : MonoBehaviour {
     {
         this.objMaterial = GetComponent<Renderer>().material;
         this.objColor = objMaterial.color;
-    }
-
-    void ChangeColor(Color color)
-    {
-        GetComponent<Renderer>().material.color = color;
     }
 
     // Update is called once per frame
