@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4436570102980414}
   - component: {fileID: 114728694963683736}
-  - component: {fileID: 114245026133566862}
   m_Layer: 0
   m_Name: CylinderObject
   m_TagString: Untagged
@@ -57,6 +56,7 @@ GameObject:
   - component: {fileID: 23218227274242210}
   - component: {fileID: 136123790802034914}
   - component: {fileID: 114346013420571464}
+  - component: {fileID: 114549660987222824}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -203,17 +203,6 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
---- !u!114 &114245026133566862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069176239334778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76bf644cba0faef42a724b7bf3455296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114346013420571464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +212,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67340049a263145848f750f7c397b973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114549660987222824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953047250690108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bf644cba0faef42a724b7bf3455296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114728694963683736
