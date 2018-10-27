@@ -38,6 +38,7 @@ public class ButtonManager : MonoBehaviour {
             Destroy(current.gameObject);
         }
         current = Instantiate(objects[i % 3], objPos, Quaternion.identity);
+       
         printer.Text = prompts[i % 3];
         i++;
     }
