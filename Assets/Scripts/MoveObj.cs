@@ -21,17 +21,16 @@ public class MoveObj : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetButton("Mouse X"))
+        if (Input.GetButton("MouseDragX"))
         {
-            moveX(Input.GetAxis("Mouse X"));
             Debug.Log("MOUSE MOVED HORIZ");
+            moveX(Input.GetAxis("MouseDragX"));
         }
 
-        if (Input.GetButton("Mouse Y"))
+        if (Input.GetButton("MouseDragY"))
         {
-            moveY(Input.GetAxis("Mouse Y"));
             Debug.Log("MOUSE MOVED VERT");
+            moveY(Input.GetAxis("MouseDragY"));
         }
 
         transform.position = objLocation;
