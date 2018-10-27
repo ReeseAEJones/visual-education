@@ -23,13 +23,11 @@ public class MoveObj : MonoBehaviour {
     {
         if (Input.GetButton("MouseDragX"))
         {
-            Debug.Log("MOUSE MOVED HORIZ");
             moveX(Input.GetAxis("MouseDragX"));
         }
 
         if (Input.GetButton("MouseDragY"))
         {
-            Debug.Log("MOUSE MOVED VERT");
             moveY(Input.GetAxis("MouseDragY"));
         }
 
