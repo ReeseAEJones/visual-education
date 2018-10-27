@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Resize component, can be applied to any object since
  * all objects have x,y,and z sizes
- */ 
+ */
 
 public class ResizeObj : MonoBehaviour {
     Vector3 size;
@@ -13,7 +13,7 @@ public class ResizeObj : MonoBehaviour {
 	void Start () {
         size = transform.localScale;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Resize"))
@@ -30,7 +30,7 @@ public class ResizeObj : MonoBehaviour {
         transform.localScale = size;
 	}
 
-    /* 
+    /*
      *changes x dimension of prism
      */
     public void resizeX(float x)
@@ -38,7 +38,7 @@ public class ResizeObj : MonoBehaviour {
         size.x += x;
     }
 
-    /* 
+    /*
      *changes y dimension of prism
      */
     public void resizeY(float y)
@@ -46,7 +46,7 @@ public class ResizeObj : MonoBehaviour {
         size.y += y;
     }
 
-    /* 
+    /*
      *changes z dimension of prism
      */
     public void resizeZ(float z)
