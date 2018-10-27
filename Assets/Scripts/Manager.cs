@@ -19,6 +19,12 @@ public class Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        CheckSpawn();
+	}
+
+    // User spawns objects from here
+    private void CheckSpawn()
+    {
         if (Input.GetButtonDown("SpawnCube"))
         {
             shapes.Add(Instantiate(cubePrefab, Vector3.zero, Quaternion.identity));
@@ -31,5 +37,16 @@ public class Manager : MonoBehaviour {
         {
             shapes.Add(Instantiate(cylinderPrefab, Vector3.zero, Quaternion.identity));
         }
-	}
+    }
+
+    // Adds MoveObj, ResizeObj, and RotateObj script components to a specific object the user is focusing on.
+    // Removes Same scripts from all other objects in scene.
+    // Is called from an object being clicked on.
+    public void UpdateFocus(GameObject clickedObj)
+    {
+        for (int i = 0; i < this.shapes.Count; i++)
+        {
+            shapes[i].gameObject.
+        }
+    }
 }
