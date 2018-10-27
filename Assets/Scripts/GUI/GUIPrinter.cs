@@ -5,8 +5,10 @@ using UnityEngine;
 public class GUIPrinter : MonoBehaviour {
     private string text;
     public string Text{ set { this.text = value; }}
+    private Rect rect;
 	// Use this for initialization
 	void Start () {
+        rect = new Rect(5, 5, 200, 100);
         this.text = "Initial";
 	}
 	
@@ -18,7 +20,7 @@ public class GUIPrinter : MonoBehaviour {
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(5, 5, 200, 100), text);
+        GUI.Box(rect, text);
     }
 }
 
