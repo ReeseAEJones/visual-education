@@ -18,9 +18,13 @@ public class ResizeObj : MonoBehaviour {
 	void Update () {
         if (Input.GetButton("Resize"))
         {
-            resizeX(Input.GetAxis("Resize") * 0.1f);
-            resizeY(Input.GetAxis("Resize") * 0.1f);
-            resizeZ(Input.GetAxis("Resize") * 0.1f);
+            if (transform.localScale.x <= 0 &&Input.GetAxis("Resize") < 0) { }
+            else
+            {
+                resizeX(Input.GetAxis("Resize") * 0.1f);
+                resizeY(Input.GetAxis("Resize") * 0.1f);
+                resizeZ(Input.GetAxis("Resize") * 0.1f);
+            }
         }
 
         transform.localScale = size;
