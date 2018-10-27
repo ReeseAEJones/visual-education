@@ -3,7 +3,7 @@ DandyHacks 2018 Fall Project
 
 ## Members
  - Reese AE Jones
- - (Member 2)
+ - Brandon Greet
  - (Member 3)
  - (Member 4)
 
@@ -12,3 +12,6 @@ To create an application to help educate students in Geometry and Calculus.
 
 # Tools
 `Unity` `Visual Studio` `C#`
+
+# Assets Used
+Unnity Standard Assets
