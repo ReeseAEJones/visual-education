@@ -1,4 +1,4 @@
-# visual-education
+# Visual Education
 DandyHacks 2018 Fall Project
 
 ## Members
