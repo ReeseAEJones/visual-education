@@ -35,12 +35,12 @@ public class LevelButtonManager : MonoBehaviour {
         printer.Location = location;
         printer.Text = prompts[i % 3];
         if(i % 3 == 0){
-            buttonManager.Mode = "Linear";
+            Settings.mode = Settings.linearMode;
         }
         else if(i % 3 == 1){
-            buttonManager.Mode = "Area";
+            Settings.mode = Settings.areaMode;
         }else{
-            buttonManager.Mode = "Volume";
+            Settings.mode = Settings.volumeMode;
         }
         i++;
     }
