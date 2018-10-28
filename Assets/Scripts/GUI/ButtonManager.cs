@@ -82,30 +82,43 @@ public class ButtonManager : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        createLinear();
-        createArea();
-        createVolume();
+        if (current != null)
+        {
+            createLinear();
+            createArea();
+            createVolume();
+            if (Settings.mode.Equals(Settings.linearMode))
+            {
+                printer.Text = this.linears[(i - 1) % 3];
+            }
+            else if (Settings.mode.Equals(Settings.areaMode))
+            {
+                printer.Text = this.areas[(i - 1) % 3];
+            }
+            else if (Settings.mode.Equals(Settings.volumeMode))
+            {
+                printer.Text = this.volumes[(i - 1) % 3];
+            }
 
+        }
         if (Settings.mode.Equals(Settings.linearMode))
         {
-            objPos = Settings.linearObjPos;
-            printer.Text = this.linears[(i-1)%3];
+            this.objPos = Settings.linearObjPos;
         }
         else if (Settings.mode.Equals(Settings.areaMode))
         {
-            objPos = Settings.areaObjPos;
-            printer.Text = this.areas[(i - 1) % 3];
+            this.objPos = Settings.areaObjPos;
         }
         else if (Settings.mode.Equals(Settings.volumeMode))
         {
-            objPos = Settings.volumeObjPos;
-            printer.Text = this.volumes[(i - 1) % 3];
+            this.objPos = Settings.volumeObjPos;
         }
 
     }
 
     private void OnMouseDown()
     {
+        Debug.Log("HELLo");
         Vector4 location;
         location.x = 5;
         location.y = 5;
@@ -118,7 +131,6 @@ public class ButtonManager : MonoBehaviour {
         }
         if (!Settings.mode.Equals(Settings.noMode))
         {
-
             current = Instantiate(objects[i % 3], objPos, Quaternion.identity);
         }
         this.i++;

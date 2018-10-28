@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelStart : MonoBehaviour
 {
-
+    Transform Player;
     // Use this for initialization
     void Start()
     {
@@ -19,17 +19,20 @@ public class LevelStart : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameObject.name.Equals("linearModeButton"))
+        if (gameObject.name.Equals("LinearStart"))
         {
             Settings.mode = Settings.linearMode;
+            Player.transform.position = Settings.linearPos;
         }
-        if (gameObject.name.Equals("areaModeButton"))
+        else if (gameObject.name.Equals("AreaStart"))
         {
             Settings.mode = Settings.areaMode;
+            Player.transform.position = Settings.areaPos;
 
         } else
         {
             Settings.mode = Settings.volumeMode;
+            Player.transform.position = Settings.volumePos;
 
         }
 

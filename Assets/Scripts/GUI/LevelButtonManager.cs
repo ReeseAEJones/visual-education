@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelButtonManager : MonoBehaviour {
 
-    public ButtonManager buttonManager;
     public GUIPrinter printer;
     private List<string> prompts;
     private int i;
+    public Transform Player;
     // Use this for initialization
     void Start()
     {
@@ -17,6 +17,7 @@ public class LevelButtonManager : MonoBehaviour {
         prompts.Add("Welcome to Linear Properties!");
         prompts.Add("Welcome to Area Calculation!");
         prompts.Add("Welcome to Volume Calculation!");
+        printer.Text = prompts[i % 3];
     }
 
     // Update is called once per frame
@@ -27,22 +28,24 @@ public class LevelButtonManager : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        i++;
         Vector4 location;
         location.x = 5;
         location.y = Screen.height - 210;
         location.z = 200;
         location.w = 100;
         printer.Location = location;
-        printer.Text = prompts[i % 3];
-        if(i % 3 == 0){
-            Settings.mode = Settings.linearMode;
-        }
-        else if(i % 3 == 1){
+        printer.Text = prompts[(i) % 3];
+        if(gameObject.name.Equals("LinearNext"))
+        {
             Settings.mode = Settings.areaMode;
-        }else{
-            Settings.mode = Settings.volumeMode;
+            Player.transform.position = Settings.areaPos;
         }
-        i++;
+        else if(gameObject.name.Equals("AreaNext"))
+        {
+            Settings.mode = Settings.volumeMode;
+            Player.transform.position = Settings.volumePos;
+        }
     }
 
 }
