@@ -5,6 +5,7 @@ using UnityEngine;
 public class GUIPrinter : MonoBehaviour {
     private string text;
     public string Text{ set { this.text = value; }}
+    public Rect rect;
     public Rect position;
     // Use this for initialization
     void Start () {
