@@ -317,8 +317,8 @@ GameObject:
   - component: {fileID: 406753219}
   - component: {fileID: 406753218}
   - component: {fileID: 406753217}
-  - component: {fileID: 406753216}
   - component: {fileID: 406753215}
+  - component: {fileID: 406753216}
   m_Layer: 0
   m_Name: CubeButton (1)
   m_TagString: Untagged
