@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436570102980414}
-  - component: {fileID: 114629629438754028}
   m_Layer: 0
   m_Name: CylinderObject
   m_TagString: Untagged
@@ -189,7 +188,7 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585501133446428}
-  m_Text: 'Cylinder Description:'
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.2
   m_LineSpacing: 1
@@ -203,17 +202,6 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
---- !u!114 &114629629438754028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069176239334778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40a06b6d902654b3dba38ef5a424855d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114640866221883338
 MonoBehaviour:
   m_ObjectHideFlags: 1
