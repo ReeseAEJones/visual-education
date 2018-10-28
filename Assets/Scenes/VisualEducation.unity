@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7628ef20f05479fafd81660a64453d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1629998522}
   printer: {fileID: 0}
 --- !u!114 &406753216
 MonoBehaviour:
