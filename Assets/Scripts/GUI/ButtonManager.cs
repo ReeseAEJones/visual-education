@@ -12,13 +12,12 @@ public class ButtonManager : MonoBehaviour {
     private List<Transform> objects;
     private Vector3 objPos;
     private string mode;
-    public string Mode { set { this.mode = value; }}
     private int i;
 
 	// Use this for initialization
 	void Start () {
         this.printer = GetComponent<GUIPrinter>();
-        this.mode = "Linear";
+        this.mode = Settings.mode;
         this.i = 0;
         objects = new List<Transform>();
         linears = new List<string>();
@@ -87,16 +86,19 @@ public class ButtonManager : MonoBehaviour {
         createArea();
         createVolume();
 
-        if (mode.Equals("Linear"))
+        if (Settings.mode.Equals(Settings.linearMode))
         {
+            objPos = Settings.linearObjPos;
             printer.Text = this.linears[(i-1)%3];
         }
-        else if (mode.Equals("Area"))
+        else if (Settings.mode.Equals(Settings.areaMode))
         {
+            objPos = Settings.areaObjPos;
             printer.Text = this.areas[(i - 1) % 3];
         }
-        else
+        else if (Settings.mode.Equals(Settings.volumeMode))
         {
+            objPos = Settings.volumeObjPos;
             printer.Text = this.volumes[(i - 1) % 3];
         }
 
@@ -114,7 +116,11 @@ public class ButtonManager : MonoBehaviour {
         {
             Destroy(current.gameObject);
         }
-        current = Instantiate(objects[i % 3], objPos, Quaternion.identity);
+        if (!Settings.mode.Equals(Settings.noMode))
+        {
+
+            current = Instantiate(objects[i % 3], objPos, Quaternion.identity);
+        }
         this.i++;
     }
 }
