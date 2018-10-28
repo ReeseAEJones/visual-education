@@ -6,9 +6,11 @@ public class TerrainGen : MonoBehaviour {
 
     private TerrainData tData;
     private float[,,] splatmap;
+
 	// Use this for initialization
 	void Start () {
         tData = GetComponent<TerrainCollider>().terrainData;
+        splatmap = new float[129, 129, 3];
         tData.alphamapResolution = 129;
 
         float timeStart = 0.027f;
@@ -19,7 +21,7 @@ public class TerrainGen : MonoBehaviour {
         {
             for (int z = 0; z < 129; z++)
             {
-                splatWeights[0] = 0.4f;
+                splatWeights[0] = 0.7f;
                 splatWeights[1] = Mathf.PerlinNoise(timeStart * x, timeSkip * z);
                 splatWeights[2] = Mathf.PerlinNoise(timeStart * x, 0.1f * z);
 

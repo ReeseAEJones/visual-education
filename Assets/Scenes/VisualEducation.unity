@@ -363,7 +363,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0
@@ -770,7 +775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0
@@ -834,7 +844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0
@@ -851,6 +866,7 @@ GameObject:
   - component: {fileID: 2069811476}
   - component: {fileID: 2069811475}
   - component: {fileID: 2069811474}
+  - component: {fileID: 2069811477}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -913,3 +929,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069811477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069811473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b54dc276e6f1649897e61840ed85c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
