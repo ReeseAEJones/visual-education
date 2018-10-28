@@ -317,8 +317,8 @@ GameObject:
   - component: {fileID: 406753219}
   - component: {fileID: 406753218}
   - component: {fileID: 406753217}
-  - component: {fileID: 406753216}
   - component: {fileID: 406753215}
+  - component: {fileID: 406753216}
   m_Layer: 0
   m_Name: CubeButton (1)
   m_TagString: Untagged
@@ -363,7 +363,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0
@@ -770,7 +775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0
@@ -834,7 +844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92f9aa84a4f8488bbf009e56b33d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   position:
     serializedVersion: 2
     x: 0

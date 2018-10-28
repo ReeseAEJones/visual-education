@@ -12,7 +12,9 @@ public class ButtonManager : MonoBehaviour {
     private List<Transform> objects;
     private Vector3 objPos;
     private string mode;
+    public string Mode { set { this.mode = value; }}
     private int i;
+
 	// Use this for initialization
 	void Start () {
         this.printer = GetComponent<GUIPrinter>();
@@ -77,6 +79,19 @@ public class ButtonManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (mode.Equals("Linear"))
+        {
+            printer.Text = linears[i % 3];
+        }
+        else if (mode.Equals("Area"))
+        {
+            printer.Text = areas[i % 3];
+        }
+        else
+        {
+            printer.Text = volumes[i % 3];
+        }
         createLinear();
         createArea();
         createVolume();
@@ -98,16 +113,6 @@ public class ButtonManager : MonoBehaviour {
         createArea();
         createVolume();
 
-        if (mode.Equals("Linear"))
-        {
-            printer.Text = linears[i % 3];
-        }
-        else if (mode.Equals("Area")){
-            printer.Text = areas[i % 3];
-        }
-        else{
-            printer.Text = volumes[i % 3];
-        }
         i++;
 
     }

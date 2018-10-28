@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelButtonManager : MonoBehaviour {
 
+    public ButtonManager buttonManager;
     public GUIPrinter printer;
     private List<string> prompts;
     private int i;
@@ -33,6 +34,14 @@ public class LevelButtonManager : MonoBehaviour {
         location.w = 100;
         printer.Location = location;
         printer.Text = prompts[i % 3];
+        if(i % 3 == 0){
+            buttonManager.Mode = "Linear";
+        }
+        else if(i % 3 == 1){
+            buttonManager.Mode = "Area";
+        }else{
+            buttonManager.Mode = "Volume";
+        }
         i++;
     }
 
