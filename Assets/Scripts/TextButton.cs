@@ -7,7 +7,7 @@ public class TextButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<Renderer>().material.color = Color.black;
+        GetComponent<Renderer>().material.color = Color.white;
 	}
 
     private void OnMouseEnter()
