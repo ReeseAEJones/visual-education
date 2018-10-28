@@ -26,7 +26,14 @@ public class LevelButtonManager : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Vector4 location;
+        location.x = 5;
+        location.y = Screen.height - 210;
+        location.z = 200;
+        location.w = 100;
+        printer.Location = location;
         printer.Text = prompts[i % 3];
         i++;
     }
+
 }

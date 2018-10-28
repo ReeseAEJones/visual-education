@@ -84,6 +84,12 @@ public class ButtonManager : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Vector4 location;
+        location.x = 5;
+        location.y = 5;
+        location.z = 200;
+        location.w = 100;
+        printer.Location = location;
         if(current != null){
             Destroy(current.gameObject);
         }
@@ -103,5 +109,6 @@ public class ButtonManager : MonoBehaviour {
             printer.Text = volumes[i % 3];
         }
         i++;
+
     }
 }
